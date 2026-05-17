@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "mtr_beijing_addon",
+  "version": "${version}",
+  "name": "MTR Beijing Addon",
+  "description": "Extension for fangsu mod",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.fangsu.BeijingAddon::init"
+    ]
+  },
+  "depends": {
+    "fangsu": "*"
+  }
+}

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="175078e2-9bb1-442f-a04a-55cf792fc932" name="更改" comment="">
+      <change afterPath="G:/MTR Beijing Addon/.gitattributes" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/.gitignore" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/.idea/.gitignore" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/.idea/misc.xml" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/build.gradle" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/gradle.properties" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/gradlew" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/gradlew.bat" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/libs/fangsu.jar" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/settings.gradle" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/BeijingAddon.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/diaoban/BeijingDiaobanA.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/lcds/BeijingLcd.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/fonts/source-han-sans-bold.otf" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/fonts/source-han-sans.otf" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/fonts/unifont.otf" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources/door.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources/logo.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/mtr/mtr_custom_resources.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/fabric.mod.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="G:/MTR Beijing Addon">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="G:/MTR Beijing Addon">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MTR Beijing Addon" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="G:/MTR Beijing Addon" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3DWc3J3xaHSFlpxID3wf91I2Fgv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build.executor": "Run",
+    "Gradle.G:/MTR Beijing Addon [init].executor": "Run",
+    "Gradle.G:MTR Beijing Addon [wrapper genIntellijRuns].executor": "Run",
+    "Gradle.Refresh dependency.executor": "Run",
+    "Gradle.构建 MTR Beijing Addon.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\MTR Beijing Addon\src\main\resources\assets\fangsu\lcdResources" />
+      <recent name="G:\MTR Beijing Addon\src\main\resources\assets\fangsu" />
+      <recent name="G:\MTR Beijing Addon\src\main\resources\asstes\mtr" />
+      <recent name="G:\MTR Beijing Addon\libs" />
+      <recent name="G:\MTR Beijing Addon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\MTR Beijing Addon\src\main\resources\assets\mtr" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle init" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.Build">
+    <configuration name="Build" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="G:/MTR Beijing Addon" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="G:/MTR Beijing Addon [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="G:/MTR Beijing Addon" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="init" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Refresh dependency" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="G:/MTR Beijing Addon" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--refresh-dependencies" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Build" />
+      <item itemvalue="Gradle.Refresh dependency" />
+      <item itemvalue="Gradle.G:/MTR Beijing Addon [init]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.G:/MTR Beijing Addon [init]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="175078e2-9bb1-442f-a04a-55cf792fc932" name="更改" comment="" />
+      <created>1778401070692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778401070692</updated>
+      <workItem from="1778401072066" duration="665000" />
+      <workItem from="1778401864051" duration="3000" />
+      <workItem from="1778402072419" duration="20000" />
+      <workItem from="1778402727899" duration="4443000" />
+      <workItem from="1778409655588" duration="68000" />
+      <workItem from="1778415085611" duration="263000" />
+      <workItem from="1778499464713" duration="4349000" />
+      <workItem from="1778588081582" duration="2179000" />
+      <workItem from="1778926313246" duration="14609000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

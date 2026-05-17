@@ -1,0 +1,17 @@
+{
+  "custom_trains": {
+
+    "r_train_mini_fangsu_beijing_lcd": {
+      "name": "R-TRAIN (Beijing LCD) (Mini)",
+      "description": "Provided by FangSu Blocks",
+      "color": "6CB5E2",
+      "lcd": {
+        "id": "beijing",
+        "slots": "mtr:r_train/slots_mini.json"
+      },
+      "texture_id": "mtr:textures/entity/r_train",
+      "base_train_type": "r_train_mini",
+      "speed_sound_base_id": "c1141a"
+    }
+  }
+}
