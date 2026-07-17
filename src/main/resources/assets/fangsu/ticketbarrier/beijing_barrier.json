@@ -1,0 +1,242 @@
+{
+    "content": [
+        {
+            "id": "beijing1",
+            "text": "beijing1",
+            "model": "fangsu:ticketbarrier/beijing/beijing_1_common.obj",
+            "flipV": true,
+            "open_model": "fangsu:ticketbarrier/beijing/beijing_1_open.obj",
+            "doors": [
+                {
+                    "model": "fangsu:ticketbarrier/beijing/beijing_1_door.obj",
+                    "use_parted_model": true,
+                    "flipV": true,
+                    "doorType": 1,
+                    "pos": [
+                        {
+                            "subModel": "gatear",
+                            "pos": [-0.34375, 0.2775, 0],
+                            "side": 0,
+                            "step": -0.1
+                        },
+                        {
+                            "subModel": "gatebr",
+                            "pos": [-0.34375, 0.3, 0],
+                            "side": 0,
+                            "step": -0.2
+                        },
+                        {
+                            "subModel": "gateal",
+                            "pos": [0.34375, 0.2775, 0],
+                            "side": 0,
+                            "step": 0.1
+                        },
+                        {
+                            "subModel": "gatebl",
+                            "pos": [0.34375, 0.3, 0],
+                            "side": 0,
+                            "step": 0.2
+                        }
+                    ]
+                }
+            ],
+            "shape": [
+                [-1.5, 0, -4, 1.5, 16.101, 20],
+                [15.5, 0, -4, 17.5, 16.1, 20]
+            ],
+            "collisionShape": [
+                [-1.5, 0, -4, 1.5, 24, 20],
+                [15.5, 0, -4, 17.5, 24, 20]
+            ],
+            "doorCloseShape": [[1, 6, 7, 15, 12, 9]],
+            "doorCloseCollisionShape": [[1, 6, 7, 15, 24, 9]],
+            "gatePos": 0.5
+        },
+        {
+            "id": "beijing1_p",
+            "text": "beijing1_positive",
+            "model": "fangsu:ticketbarrier/beijing/beijing_1_positive.obj",
+            "flipV": true,
+            "open_model": "fangsu:ticketbarrier/beijing/beijing_1_open.obj",
+            "doors": [
+                {
+                    "model": "fangsu:ticketbarrier/beijing/beijing_1_door.obj",
+                    "use_parted_model": true,
+                    "flipV": true,
+                    "doorType": 1,
+                    "pos": [
+                        {
+                            "subModel": "gatear",
+                            "pos": [-0.4375, 0.2775, 0],
+                            "side": 0,
+                            "step": -0.1
+                        },
+                        {
+                            "subModel": "gatebr",
+                            "pos": [-0.4375, 0.3, 0],
+                            "side": 0,
+                            "step": -0.2
+                        },
+                        {
+                            "subModel": "gateal",
+                            "pos": [0.25, 0.2775, 0],
+                            "side": 0,
+                            "step": 0.1
+                        },
+                        {
+                            "subModel": "gatebl",
+                            "pos": [0.25, 0.3, 0],
+                            "side": 0,
+                            "step": 0.2
+                        }
+                    ]
+                }
+            ],
+            "shape": [
+                [0, 0, -4, 3, 16.101, 20],
+                [16, 0, -4, 19, 16.1, 20]
+            ],
+            "collisionShape": [
+                [0, 0, -4, 3, 24, 20],
+                [16, 0, -4, 19, 24, 20]
+            ],
+            "doorCloseShape": [[0, 6, 7, 16, 12, 9]],
+            "doorCloseCollisionShape": [[0, 6, 7, 16, 24, 9]],
+            "gatePos": 0.5
+        },
+        {
+            "id": "beijing1_n",
+            "text": "beijing1_negative",
+            "model": "fangsu:ticketbarrier/beijing/beijing_1_negative.obj",
+            "flipV": true,
+            "open_model": "fangsu:ticketbarrier/beijing/beijing_1_open.obj",
+            "doors": [
+                {
+                    "model": "fangsu:ticketbarrier/beijing/beijing_1_door.obj",
+                    "use_parted_model": true,
+                    "flipV": true,
+                    "doorType": 1,
+                    "pos": [
+                        {
+                            "subModel": "gatear",
+                            "pos": [-0.25, 0.2775, 0],
+                            "side": 0,
+                            "step": -0.1
+                        },
+                        {
+                            "subModel": "gatebr",
+                            "pos": [-0.25, 0.3, 0],
+                            "side": 0,
+                            "step": -0.2
+                        },
+                        {
+                            "subModel": "gateal",
+                            "pos": [0.4375, 0.2775, 0],
+                            "side": 0,
+                            "step": 0.1
+                        },
+                        {
+                            "subModel": "gatebl",
+                            "pos": [0.4375, 0.3, 0],
+                            "side": 0,
+                            "step": 0.2
+                        }
+                    ]
+                }
+            ],
+            "shape": [
+                [-3, 0, -4, 0, 16.101, 20],
+                [13, 0, -4, 16, 16.1, 20]
+            ],
+            "collisionShape": [
+                [-3, 0, -4, 0, 24, 20],
+                [13, 0, -4, 16, 24, 20]
+            ],
+            "doorCloseShape": [[0, 6, 7, 16, 12, 9]],
+            "doorCloseCollisionShape": [[0, 6, 7, 16, 24, 9]],
+            "gatePos": 0.5
+        },
+        {
+            "id": "beijing1_wide_r",
+            "text": "beijing1_wide_right",
+            "model": "fangsu:ticketbarrier/beijing/beijing_1_wide_r.obj",
+            "flipV": true,
+            "open_model": "fangsu:ticketbarrier/beijing/beijing_1_open.obj",
+            "doors": [
+                {
+                    "model": "fangsu:ticketbarrier/beijing/beijing_1_door.obj",
+                    "use_parted_model": true,
+                    "flipV": true,
+                    "doorType": 1,
+                    "pos": [
+                        {
+                            "subModel": "gateal",
+                            "pos": [0.25, 0.2775, 0],
+                            "side": 0,
+                            "step": 0.1
+                        },
+                        {
+                            "subModel": "gatebl",
+                            "pos": [0.25, 0.3, 0],
+                            "side": 0,
+                            "step": 0.2
+                        },
+                        {
+                            "subModel": "gatebl",
+                            "pos": [0.25, 0.25, 0],
+                            "side": 0,
+                            "step": 0.275
+                        }
+                    ]
+                }
+            ],
+            "shape": [[0, 0, -4, 3, 16.101, 20]],
+            "collisionShape": [[0, 0, -4, 3, 24, 20]],
+            "doorCloseShape": [[0, 6, 7, 16, 12, 9]],
+            "doorCloseCollisionShape": [[0, 6, 7, 16, 24, 9]],
+            "connectType": 2,
+            "gatePos": 0.5
+        },
+        {
+            "id": "beijing1_wide_l",
+            "text": "beijing1_wide_left",
+            "model": "fangsu:ticketbarrier/beijing/beijing_1_wide_l.obj",
+            "flipV": true,
+            "open_model": "fangsu:ticketbarrier/beijing/beijing_1_open.obj",
+            "doors": [
+                {
+                    "model": "fangsu:ticketbarrier/beijing/beijing_1_door.obj",
+                    "use_parted_model": true,
+                    "flipV": true,
+                    "doorType": 1,
+                    "pos": [
+                        {
+                            "subModel": "gatear",
+                            "pos": [0.25, 0.2775, 0],
+                            "side": 0,
+                            "step": -0.1
+                        },
+                        {
+                            "subModel": "gatebr",
+                            "pos": [0.25, 0.3, 0],
+                            "side": 0,
+                            "step": -0.2
+                        },
+                        {
+                            "subModel": "gatebr",
+                            "pos": [0.25, 0.25, 0],
+                            "side": 0,
+                            "step": -0.275
+                        }
+                    ]
+                }
+            ],
+            "shape": [[5, 0, -4, 8, 16.1, 20]],
+            "collisionShape": [[5, 0, -4, 8, 24, 20]],
+            "doorCloseShape": [[0, 6, 7, 8, 12, 9]],
+            "doorCloseCollisionShape": [[0, 6, 7, 8, 24, 9]],
+            "connectType": 1,
+            "gatePos": 0.5
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+  "content": [
+    {
+      "id": "beijing_ris_a",
+      "text": "fangsu.mtrbeijingaddon.ris.a.text",
+      "contentText": "fangsu.mtrbeijingaddon.ris.a.content_text",
+      "model": "fangsu:ris/beijing_ris_a.obj",
+      "script": "fangsu:ris/beijing_ris_a.js",
+      "shape": [
+        [
+          0,
+          0,
+          15,
+          16,
+          26,
+          16
+        ]
+      ],
+      "slots": [
+        [
+          [
+            -0.4375,
+            1.5625,
+            -0.43
+          ],
+          [
+            -0.4375,
+            0.0625,
+            -0.43
+          ],
+          [
+            0.4375,
+            0.0625,
+            -0.43
+          ],
+          [
+            0.4375,
+            1.5625,
+            -0.43
+          ]
+        ]
+      ],
+      "texSize": [
+        1024,
+        1756
+      ]
+    },
+    {
+      "id": "beijing_ris_b",
+      "text": "fangsu.mtrbeijingaddon.ris.b.text",
+      "contentText": "fangsu.mtrbeijingaddon.ris.b.content_text",
+      "model": "fangsu:ris/beijing_ris_b.obj",
+      "script": "fangsu:ris/beijing_ris_b.js",
+      "shape": [
+        [
+          1,
+          2,
+          15,
+          15,
+          14,
+          16
+        ]
+      ],
+      "slots": [
+        [
+          [
+            -0.4375,
+            0.875,
+            -0.435
+          ],
+          [
+            -0.4375,
+            0.125,
+            -0.435
+          ],
+          [
+            0.4375,
+            0.125,
+            -0.435
+          ],
+          [
+            0.4375,
+            0.875,
+            -0.435
+          ]
+        ]
+      ],
+      "texSize": [
+        700,
+        600
+      ]
+    }
+  ]
+}

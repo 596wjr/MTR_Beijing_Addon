@@ -1,0 +1,79 @@
+{
+  "ticketBarrier": [
+    {
+      "text": "fangsu.mtrbeijingaddon.ticketbarrier.text",
+      "content": "fangsu:ticketbarrier/beijing_barrier.json"
+    }
+  ],
+  "screendoor": [
+    {
+      "text": "fangsu.mtrbeijingaddon.screendoor_bg1.text",
+      "content": "fangsu:screendoor/bj/bg1.json",
+      "contentText": "fangsu.mtrbeijingaddon.screendoor_bg1.contentText"
+    },
+    {
+      "text": "fangsu.mtrbeijingaddon.screendoor_qg1.text",
+      "content": "fangsu:screendoor/bj/qg1.json",
+      "contentText": "fangsu.mtrbeijingaddon.screendoor_qg1.contentText"
+    }
+  ],
+  "diaoban": [
+    {
+      "text": "fangsu.mtrbeijingaddon.diaoban.text",
+      "content": "fangsu:diaoban/bj/diaoban.json",
+      "default": {
+        "subModel": "beijing_diaoban_a"
+      }
+    }
+  ],
+  "pids": [
+    {
+      "text": "fangsu.mtrbeijingaddon.pids.text",
+      "content": "fangsu:pids/beijing_pids.json"
+    }
+  ],
+  "sign": [
+    {
+      "text": "fangsu.mtrbeijingaddon.sign.text",
+      "content": "fangsu:sign/beijing/beijing_sign.json"
+    }
+  ],
+  "adv_board": [
+    {
+      "text": "fangsu.mtrbeijingaddon.adv_board.text",
+      "content": "fangsu:adv_board/beijing_adv.json",
+      "default": {
+        "mainModel": "adv_1"
+      }
+    }
+  ],
+  "route_info_sign": [
+    {
+      "text": "fangsu.mtrbeijingaddon.ris.text",
+      "contentText": "fangsu.mtrbeijingaddon.ris.content_text",
+      "content": "fangsu:ris/beijing_ris.json",
+      "default": {
+        "subModel": "beijing_ris_a"
+      }
+    }
+  ],
+  "station_info_sign": [
+    {
+      "text": "fangsu.mtrbeijingaddon.sis.text",
+      "contentText": "fangsu.mtrbeijingaddon.sis.content_text",
+      "content": "fangsu:sis/beijing_sis.json",
+      "default": {
+        "subModel": "beijing_sis_outer_a"
+      }
+    }
+  ],
+  "duanmen": [
+    {
+      "text": "fangsu.mtrbeijingaddon.duanmen.text",
+      "content": "fangsu:duanmen/beijing_duanmen.json",
+      "default": {
+        "subModel": "beijing_duanmen_bg_1_right"
+      }
+    }
+  ]
+}

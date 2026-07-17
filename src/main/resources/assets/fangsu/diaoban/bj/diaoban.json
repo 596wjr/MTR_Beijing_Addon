@@ -1,0 +1,105 @@
+{
+    "content": [
+        {
+            "id": "beijing_diaoban_a",
+            "model": "fangsu:diaoban/bj/beijing_diaoban_a.obj",
+            "text": "fangsu.mtrbeijingaddon.diaoban.a",
+            "contentText": "style1",
+            "subModel": {
+                "left": "l",
+                "center": "center",
+                "right": "r"
+            },
+            "unit": 8,
+            "left_space": 0.003125,
+            "right_space": 0.003125,
+            "doorlight": {
+                "off": "dl_off",
+                "on": "dl_on",
+                "type": "blink"
+            },
+            "tex": [
+                [0.125, -0.1249],
+                [0.625, -0.1249]
+            ],
+            "texSize": 750,
+            "shape": {
+                "left": [4, 0, 10, 12, 16, 16],
+                "center": [4, 0, 10, 12, 16, 16],
+                "right": [4, 0, 10, 12, 16, 16]
+            }
+        },
+        {
+            "id": "beijing_diaoban_c1",
+            "model": "fangsu:diaoban/bj/beijing_diaoban_c.obj",
+            "text": "fangsu.mtrbeijingaddon.diaoban.c1",
+            "contentText": "fangsu.mtrbeijingaddon.diaoban.c1.contentText",
+            "subModel": {
+                "left": "c1",
+                "center": "c1",
+                "right": "c1"
+            },
+            "unit": 8,
+            "left_space": 0,
+            "right_space": 0,
+            "tex": [
+                [0.25, -0.247],
+                [1, -0.1872]
+            ],
+            "texSize": 750,
+            "shape": {
+                "left": [4, 4, 12, 12, 16, 16],
+                "center": [4, 4, 12, 12, 16, 16],
+                "right": [4, 4, 12, 12, 16, 16]
+            }
+        },
+        {
+            "id": "beijing_diaoban_c2",
+            "model": "fangsu:diaoban/bj/beijing_diaoban_c.obj",
+            "text": "fangsu.mtrbeijingaddon.diaoban.c2",
+            "contentText": "fangsu.mtrbeijingaddon.diaoban.c2.contentText",
+            "subModel": {
+                "left": "c2",
+                "center": "c2",
+                "right": "c2"
+            },
+            "unit": 8,
+            "left_space": 0,
+            "right_space": 0,
+            "tex": [
+                [0.125, -0.372],
+                [0.875, -0.372]
+            ],
+            "texSize": 750,
+            "shape": {
+                "left": [4, 2, 14, 12, 14, 16],
+                "center": [4, 2, 14, 12, 14, 16],
+                "right": [4, 2, 14, 12, 14, 16]
+            }
+        },
+        {
+            "id": "beijing_diaoban_c3",
+            "model": "fangsu:diaoban/bj/beijing_diaoban_c.obj",
+            "text": "fangsu.mtrbeijingaddon.diaoban.c3",
+            "contentText": "fangsu.mtrbeijingaddon.diaoban.c3.contentText",
+            "subModel": {
+                "left": "c3",
+                "center": "c3",
+                "right": "c3"
+            },
+            "unit": 8,
+            "left_space": 0.1,
+            "right_space": 0.1,
+            "tex": [
+                [0.125, -0.372],
+                [0.95, -0.372]
+            ],
+            "texSize": 750,
+            "shape": {
+                "left": [4, 0, 14, 12, 16, 16],
+                "center": [4, 0, 14, 12, 16, 16],
+                "right": [4, 0, 14, 12, 16, 16]
+            }
+        }
+    ]
+}

@@ -3,3 +3,8 @@
 
 # Ignore Gradle build output directory
 build
+
+libs
+/with_fangsu_code.code-workspace
+/.idea/
+/.vscode/

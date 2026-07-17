@@ -1,0 +1,12 @@
+# Made in Blockbench 5.1.4
+newmtl m_c4ef035f-6b10-f66f-55f4-3296f0e79dee
+map_Kd gate.png
+newmtl m_fae77e0a-5028-f195-caba-20d89c450eac
+map_Kd barrier_lightgray.png
+newmtl m_ce8b381d-1a9b-f02a-1bd0-823c7d8a42df
+map_Kd cross.png
+newmtl m_98c56db7-14fd-b5be-a261-db7625093511
+map_Kd texture.png
+newmtl m_83c5c9d6-2f1f-4d8b-9893-070f5a21dff2
+map_Kd barrier_stopservice.png
+newmtl none

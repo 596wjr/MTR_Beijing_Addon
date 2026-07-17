@@ -4,31 +4,167 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="175078e2-9bb1-442f-a04a-55cf792fc932" name="更改" comment="">
-      <change afterPath="G:/MTR Beijing Addon/.gitattributes" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/.gitignore" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/.idea/.gitignore" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/.idea/misc.xml" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/build.gradle" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/gradle.properties" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/gradlew" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/gradlew.bat" afterDir="false" />
+    <list default="true" id="175078e2-9bb1-442f-a04a-55cf792fc932" name="更改" comment="初始提交">
+      <change afterPath="G:/MTR Beijing Addon/LICENCE" afterDir="false" />
       <change afterPath="G:/MTR Beijing Addon/libs/fangsu.jar" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/settings.gradle" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/BeijingAddon.java" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/diaoban/BeijingDiaobanA.java" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/lcds/BeijingLcd.java" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/META-INF/mods.toml" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/fonts/source-han-sans-bold.otf" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/fonts/source-han-sans.otf" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/fonts/unifont.otf" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources/door.png" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources/logo.png" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/mtr/mtr_custom_resources.json" afterDir="false" />
-      <change afterPath="G:/MTR Beijing Addon/src/main/resources/fabric.mod.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/forge/BeijingAddonForge.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/pids/BeijingPidsB.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/ris/BeijingZhanpaiAA.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/ris/BeijingZhanpaiDrawer.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/sign/BeijingExitSignItem.java" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/adv_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/adv_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/adv_in_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/adv_in_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/beijing_adv.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/bg_color.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/black.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/bus_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/bus_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/light_metal.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/metal.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/adv_board/side_color.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/custom_blocks.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/beijing_diaoban_a.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/beijing_diaoban_a.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/beijing_diaoban_c.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/beijing_diaoban_c.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/blk.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/current.js" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/diaoban.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/diaoban.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/diaoban.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/dkg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/dloff.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/dlon.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/dwhite.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/ltg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/route1.js" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/routecolor.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/diaoban/bj/terminal.js" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/beijing_duanmen.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/bj_duanmen_bg_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/bj_duanmen_bg_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/bj_duanmen_qg_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/bj_duanmen_qg_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/blk.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/chengkezhibu.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/dkg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/dl_on.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/dloff.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/duanmen/ltg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lang/zh_cn.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/b.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/beijing_a.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/beijing_pids_a1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/beijing_pids_a1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/beijing_pids_a2.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/beijing_pids_a2.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/black.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/blk.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing/dkg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/pids/beijing_pids.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/beijing_bus_ris.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/beijing_ris.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/beijing_ris_a.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/beijing_ris_a.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/beijing_ris_b.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/beijing_ris_b.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/imgtrans.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/light_metal.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ris/metal.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bg1.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_diaoban.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_diaoban.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_sc_1_doorlight.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_sc_1_doorlight.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_screendoor.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_screendoor_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_screendoor_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_screendoor_qg_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/bj_screendoor_qg_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/blk.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/dkg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/dloff.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/dlon.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/dwhite.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/ltg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/qg1.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/screendoor/bj/routecolor.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijing_sign.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijing_sign_b.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijing_sign_b.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijingsign_a.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijingsign_a.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijingsign_a_onwall.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/beijingsign_a_onwall.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/sign_b_bg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/sign_light.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/sign_pole.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/sign_side.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/signitem_bg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/beijing/signitem_side.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/routea.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/routeb.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/toilets.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sign/trainicon.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis_a.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis_a.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis_a_side.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis_out_a.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis_out_a.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/beijing_sis_outer_1_bg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/darkblue.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/dkg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/g.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/gray_2.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/ltg.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/sis/red.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/arrow.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_available.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_black.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_cross.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_led.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_lightgray.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_stopservice.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/barrier_yellow.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_common.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_common.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_door.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_door.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_negitive.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_negitive.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_open.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_open.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_positive.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_positive.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_wide_l.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_wide_l.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_wide_r.mtl" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/beijing_1_wide_r.obj" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/cross.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/gate.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/qingshuaka.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/texture.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing/ticket_entrance.png" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/ticketbarrier/beijing_barrier.json" afterDir="false" />
+      <change afterPath="G:/MTR Beijing Addon/src/main/resources/assets/mtrsteamloco/lang/zh_cn.json" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/.gitignore" beforeDir="false" afterPath="G:/MTR Beijing Addon/.gitignore" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/.idea/gradle.xml" beforeDir="false" afterPath="G:/MTR Beijing Addon/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/.idea/workspace.xml" beforeDir="false" afterPath="G:/MTR Beijing Addon/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/build.gradle" beforeDir="false" afterPath="G:/MTR Beijing Addon/build.gradle" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/settings.gradle" beforeDir="false" afterPath="G:/MTR Beijing Addon/settings.gradle" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/java/com/fangsu/BeijingAddon.java" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/BeijingAddon.java" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/java/com/fangsu/diaoban/BeijingDiaobanA.java" beforeDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/java/com/fangsu/lcds/BeijingLcd.java" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/java/com/fangsu/beijing/lcds/BeijingLcd.java" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources/door.png" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcd_resources/door.png" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources/logo.png" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcd_resources/logo.png" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/resources/assets/mtr/mtr_custom_resources.json" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/resources/assets/mtr/mtr_custom_resources.json" afterDir="false" />
+      <change beforePath="G:/MTR Beijing Addon/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="G:/MTR Beijing Addon/src/main/resources/fabric.mod.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +209,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="G:/MTR Beijing Addon" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;596wjr&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:/596wjr/MTR_Beijing_Addon.git&quot;,
+    &quot;accountId&quot;: &quot;ef35200f-86b3-4e2f-89ff-a9b86d4a9d7a&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -84,34 +232,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build.executor": "Run",
-    "Gradle.G:/MTR Beijing Addon [init].executor": "Run",
-    "Gradle.G:MTR Beijing Addon [wrapper genIntellijRuns].executor": "Run",
-    "Gradle.Refresh dependency.executor": "Run",
-    "Gradle.构建 MTR Beijing Addon.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/MTR Beijing Addon/src/main/resources/assets/fangsu/lcdResources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.G:/MTR Beijing Addon [init].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.G:MTR Beijing Addon [wrapper genIntellijRuns].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Refresh dependency.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.构建 MTR Beijing Addon.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/MTR Beijing Addon/src/main/resources/assets/fangsu&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\MTR Beijing Addon\src\main\resources\assets\fangsu\lcdResources" />
       <recent name="G:\MTR Beijing Addon\src\main\resources\assets\fangsu" />
+      <recent name="G:\MTR Beijing Addon\src\main\resources\assets" />
+      <recent name="G:\MTR Beijing Addon\src\main\resources\assets\fangsu\lcdResources" />
       <recent name="G:\MTR Beijing Addon\src\main\resources\asstes\mtr" />
       <recent name="G:\MTR Beijing Addon\libs" />
-      <recent name="G:\MTR Beijing Addon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\MTR Beijing Addon\src\main\resources\assets\mtr" />
@@ -223,10 +371,55 @@
       <workItem from="1778499464713" duration="4349000" />
       <workItem from="1778588081582" duration="2179000" />
       <workItem from="1778926313246" duration="14609000" />
+      <workItem from="1778981829887" duration="3033000" />
+      <workItem from="1779283725939" duration="1766000" />
+      <workItem from="1779291645815" duration="6000" />
+      <workItem from="1779291692371" duration="93000" />
+      <workItem from="1779292253082" duration="346000" />
+      <workItem from="1779360078108" duration="16000" />
+      <workItem from="1780634554395" duration="3275000" />
+      <workItem from="1780641604667" duration="14248000" />
+      <workItem from="1780668102399" duration="2410000" />
+      <workItem from="1780790011968" duration="34000" />
+      <workItem from="1780808001744" duration="1790000" />
+      <workItem from="1780812445974" duration="7640000" />
+      <workItem from="1782284194854" duration="3129000" />
+      <workItem from="1782700149497" duration="2329000" />
+      <workItem from="1782788164249" duration="172000" />
+      <workItem from="1782790053604" duration="350000" />
+      <workItem from="1782793994976" duration="82000" />
+      <workItem from="1782794482136" duration="1460000" />
+      <workItem from="1782796297745" duration="1709000" />
+      <workItem from="1782798724648" duration="241000" />
+      <workItem from="1782800129080" duration="2052000" />
     </task>
+    <task id="LOCAL-00001" summary="初始提交">
+      <option name="closed" value="true" />
+      <created>1778982083203</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778982083203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始提交" />
   </component>
 </project>

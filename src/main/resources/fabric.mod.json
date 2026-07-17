@@ -8,7 +8,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.fangsu.BeijingAddon::init"
+      "com.fangsu.beijing.BeijingAddon::init"
     ]
   },
   "depends": {

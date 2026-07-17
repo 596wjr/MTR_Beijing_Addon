@@ -5,5 +5,15 @@
  * For more detailed information on multi-project builds, please refer to https://docs.gradle.org/8.10/userguide/multi_project_builds.html in the Gradle documentation.
  */
 
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.architectury.dev/' }
+        maven { url = 'https://files.minecraftforge.net/maven/' }
+        maven { url = "https://repo.replaymod.com" }
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = 'MTR Beijing Addon'
 

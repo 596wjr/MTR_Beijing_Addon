@@ -7,19 +7,41 @@
 
 plugins {
     id 'java'
+//    id 'net.minecraftforge.gradle' version '6.0.25'
 }
 
 def modName = 'MTR Beijing Addon'
-def modVersion ='0.0.1'
+def modVersion = '0.0.2'
 
 repositories {
     flatDir { dirs 'libs' }
     mavenCentral()
+
+    maven { url = "https://maven.aliyun.com/repository/central" }
+
+    // ======= MC 专用 =======
+    maven {
+        name = "BMCLAPI"
+        url = "https://bmclapi2.bangbang93.com/maven"
+        allowInsecureProtocol = true
+        content {
+            includeGroup "net.minecraft"
+            includeGroup "net.fabricmc"
+            includeGroup "net.minecraftforge"
+            includeGroup "dev.architectury"
+            includeGroup "org.parchmentmc"
+            includeGroup "me.shedaniel"
+            includeGroup "com.terraformersmc"
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
-    compileOnly name :"fangsu"
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly 'com.google.code.gson:gson:2.8.9'
+//    compileOnly fg.deobf("net.minecraftforge:forge:40.2.0")
+    compileOnly 'net.minecraftforge:forge:1.18.2-40.2.0'
 }
 
 java {

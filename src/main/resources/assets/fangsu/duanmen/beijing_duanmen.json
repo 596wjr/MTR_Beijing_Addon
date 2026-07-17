@@ -1,0 +1,144 @@
+{
+    "content": [
+        {
+            "id": "beijing_duanmen_bg_1_right",
+            "text": "fangsu.mtrbeijingaddon.duanmen.bg_1.right",
+            "model": "fangsu:duanmen/bj_duanmen_bg_1.obj",
+            "flipV": true,
+            "doorPos": [0.1875, 0, 0],
+            "subModels": {
+                "main": "main_right",
+                "door": "door_right",
+                "open": "dlon_right"
+            },
+            "doorAngle": 1,
+            "shape": {
+                "close": [[0, 0, 7, 27, 26.25, 8]],
+                "open": [
+                    [0, 0, 7, 5, 26.25, 8],
+                    [25, 0, 7, 27, 26.25, 8],
+                    [4, 0, -12, 5, 26.25, 8]
+                ]
+            },
+            "hitPos": 0.55
+        },
+        {
+            "id": "beijing_duanmen_bg_1_left",
+            "text": "fangsu.mtrbeijingaddon.duanmen.bg_1.left",
+            "model": "fangsu:duanmen/bj_duanmen_bg_1.obj",
+            "flipV": true,
+            "doorPos": [-0.1875, 0, 0],
+            "subModels": {
+                "main": "main_left",
+                "door": "door_left",
+                "open": "dlon_left"
+            },
+            "doorAngle": -1,
+            "shape": {
+                "close": [[-11, 0, 7, 16, 26.25, 8]],
+                "open": [
+                    [-11, 0, 7, -9, 26.25, 8],
+                    [11, 0, 7, 16, 26.25, 8],
+                    [11, 0, -12, 12, 26.25, 8]
+                ]
+            },
+            "hitPos": 0.55
+        },
+        {
+            "id": "beijing_duanmen_qg_1_s_right",
+            "text": "fangsu.mtrbeijingaddon.duanmen.qg_1_s.right",
+            "model": "fangsu:duanmen/bj_duanmen_qg_1.obj",
+            "flipV": true,
+            "doorPos": [0.4375, 0, 0.0625],
+            "subModels": {
+                "main": "main_s_right",
+                "door": "door_s_right"
+            },
+            "doorAngle": 1,
+            "withDiaobanDoorlight": {
+                "pos": [-0.25, 2, 0.5]
+            },
+            "shape": {
+                "close": [[0, 0, 7, 20, 32, 8]],
+                "open": [
+                    [0, 0, 7, 1, 32, 8],
+                    [19, 0, 7, 20, 32, 8],
+                    [1, 0, -11, 2, 32, 8]
+                ]
+            },
+            "hitPos": 0.55
+        },
+        {
+            "id": "beijing_duanmen_qg_1_right",
+            "text": "fangsu.mtrbeijingaddon.duanmen.qg_1.right",
+            "model": "fangsu:duanmen/bj_duanmen_qg_1.obj",
+            "flipV": true,
+            "doorPos": [0.4375, 0, -0.4375],
+            "subModels": {
+                "main": "main_right",
+                "door": "door_right"
+            },
+            "doorAngle": 1,
+            "withDiaobanDoorlight": {
+                "pos": [-0.25, 2, 0]
+            },
+            "shape": {
+                "close": [[0, 0, 15, 20, 32, 16]],
+                "open": [
+                    [0, 0, 15, 1, 32, 16],
+                    [19, 0, 15, 20, 32, 16],
+                    [1, 0, -3, 2, 32, 16]
+                ]
+            },
+            "hitPos": 0.05
+        },
+        {
+            "id": "beijing_duanmen_qg_1_s_left",
+            "text": "fangsu.mtrbeijingaddon.duanmen.qg_1_s.left",
+            "model": "fangsu:duanmen/bj_duanmen_qg_1.obj",
+            "flipV": true,
+            "doorPos": [-0.4375, 0, 0.0625],
+            "subModels": {
+                "main": "main_s_left",
+                "door": "door_s_left"
+            },
+            "doorAngle": -1,
+            "withDiaobanDoorlight": {
+                "pos": [-0.25, 2, 0.5]
+            },
+            "shape": {
+                "close": [[-4, 0, 7, 16, 32, 8]],
+                "open": [
+                    [-4, 0, 7, -3, 32, 8],
+                    [15, 0, 7, 16, 32, 8],
+                    [14, 0, -11, 15, 32, 8]
+                ]
+            },
+            "hitPos": 0.55
+        },
+        {
+            "id": "beijing_duanmen_qg_1_left",
+            "text": "fangsu.mtrbeijingaddon.duanmen.qg_1.left",
+            "model": "fangsu:duanmen/bj_duanmen_qg_1.obj",
+            "flipV": true,
+            "doorPos": [-0.4375, 0, -0.4375],
+            "subModels": {
+                "main": "main_left",
+                "door": "door_left"
+            },
+            "doorAngle": -1,
+            "withDiaobanDoorlight": {
+                "pos": [-0.25, 2, 0]
+            },
+            "shape": {
+                "close": [[-4, 0, 15, 16, 32, 16]],
+                "open": [
+                    [-4, 0, 15, -3, 32, 16],
+                    [15, 0, 15, 16, 32, 16],
+                    [14, 0, -3, 15, 32, 16]
+                ]
+            },
+            "hitPos": 0.05
+        }
+    ]
+}
