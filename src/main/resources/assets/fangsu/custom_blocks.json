@@ -55,6 +55,11 @@
       "default": {
         "subModel": "beijing_ris_a"
       }
+    },
+    {
+      "text": "fangsu.mtrbeijingaddon.ris_bus.text",
+      "contentText": "fangsu.mtrbeijingaddon.ris_bus.content_text",
+      "content": "fangsu:ris/beijing_bus_ris.json"
     }
   ],
   "station_info_sign": [

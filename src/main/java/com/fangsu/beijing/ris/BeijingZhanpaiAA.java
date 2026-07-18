@@ -29,6 +29,17 @@ public class BeijingZhanpaiAA extends BaseRisDrawing {
             BeijingZhanpaiDrawer.drawZhanpaiA(g, stations, BeijingZhanpaiDrawer.ConnectionType.NONE, stations[0], stations[stations.length - 1],
                     routeName, index, 0, 0, 1024, 512);
         }
-
+        if (routes.size() >= 2) {
+            LocalRoute route2 = routes.get(0).route;
+            LocalRouteDetail routeDetail2 = route2.asRouteDetail();
+            String routeName = (route2.lightRailRouteNumber.isEmpty() ? route2.name : route2.lightRailRouteNumber).split("\\|")[0];
+            String[] stations = new String[routeDetail2.drawStations.size()];
+            int index = route2.getPlatformIdIndex(routes.get(0).localPlatform.id);
+            for (int i = 0; i < stations.length; i++) {
+                stations[i] = routeDetail2.drawStations.get(i).stationName;
+            }
+            BeijingZhanpaiDrawer.drawZhanpaiA(g, stations, BeijingZhanpaiDrawer.ConnectionType.NONE, stations[0], stations[stations.length - 1],
+                    routeName, index, 0, 512, 1024, 512);
+        }
     }
 }

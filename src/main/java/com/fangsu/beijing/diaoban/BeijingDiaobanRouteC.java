@@ -55,14 +55,13 @@ public class BeijingDiaobanRouteC extends BaseDiaobanDrawing {
 
         if (drawInfo.routeInfo() != null) {
             Color routeColor = drawInfo.routeInfo().routeColor;
-            int arrowSide = arrowDirection;
 
             int distance = (int) (h * 0.75);
             g.setColor(routeColor);
             g.fillRect(widthPercent(x, w, 0), heightPercent(y, h, 0.25), w, (int) (h * 0.5));
 
             if (w <= distance * 8) return;
-            int currentX = widthPercent(x, w, 0.5) - distance * 4 * (arrowSide == 2 ? 1 : -1);
+            int currentX = widthPercent(x, w, 0.5) - distance * 4 * (arrowDirection == 2 ? 1 : -1);
 
             if (drawInfo.index() > 0) {
                 g.setColor(Color.WHITE);
@@ -70,10 +69,10 @@ public class BeijingDiaobanRouteC extends BaseDiaobanDrawing {
                         drawInfo.routeInfo().drawStations.get(drawInfo.index() - 1).stationName,
                         currentX, heightPercent(y, h, 0.35), h * 0.3, 1, 1);
             }
-            currentX += distance * (arrowSide == 2 ? 1 : -1) * 2;
+            currentX += distance * (arrowDirection == 2 ? 1 : -1) * 2;
 
             int[] clipX, clipY;
-            if (arrowSide == 2) {
+            if (arrowDirection == 2) {
                 clipX = new int[]{currentX - (int) (distance * 0.5), currentX - (int) (distance * 0.75),
                         currentX + (int) (distance * 0.5), currentX + (int) (distance * 0.75),
                         currentX + (int) (distance * 0.5), currentX - (int) (distance * 0.75)};
@@ -102,21 +101,21 @@ public class BeijingDiaobanRouteC extends BaseDiaobanDrawing {
             g.fillRect(currentX - distance, heightPercent(y, h, 0.94), distance * 2, (int) (h * 0.02));
             g.setClip(originalClip);
 
-            JsFunctions.jsDrawStrDl(g, baseFont, baseFont,
-                    drawInfo.routeInfo().drawStations.get(drawInfo.index()).stationName,
-                    currentX, heightPercent(y, h, 0.35), h * 0.3, 1, 1);
+            G2dTextHelper.drawStrMultiLinesWithStretch(g, baseFont, baseFont,
+                    currentX, heightPercent(y, h, 0.65), (int) (h * 0.3), Math.round(distance * 0.8f), 1, 1,
+                    drawInfo.routeInfo().drawStations.get(drawInfo.index()).stationName.split("\\|"));
 
-            currentX += distance * (arrowSide == 2 ? 1 : -1);
+            currentX += distance * (arrowDirection == 2 ? 1 : -1);
 
-            g.drawImage(loadImg(arrowSide == 2 ? "fangsu:sign/ar.png" : "fangsu:sign/al.png"),
+            g.drawImage(loadImg(arrowDirection == 2 ? "fangsu:sign/ar.png" : "fangsu:sign/al.png"),
                     currentX - (int) (h * 0.2), heightPercent(y, h, 0.4), (int) (h * 0.2), (int) (h * 0.2), null);
 
-            currentX += distance * (arrowSide == 2 ? 1 : -1);
+            currentX += distance * (arrowDirection == 2 ? 1 : -1);
 
             if (drawInfo.index() < drawInfo.routeInfo().drawStations.size() - 2) {
-                JsFunctions.jsDrawStrDl(g, baseFont, baseFont,
-                        drawInfo.routeInfo().drawStations.get(drawInfo.index() + 1).stationName,
-                        currentX, heightPercent(y, h, 0.35), h * 0.3, 1, 1);
+                G2dTextHelper.drawStrMultiLinesWithStretch(g, baseFont, baseFont,
+                        currentX, heightPercent(y, h, 0.65), Math.round(h * 0.3f), Math.round(distance * 0.8f), 1, 1,
+                        drawInfo.routeInfo().drawStations.get(drawInfo.index() + 1).stationName.split("\\|"));
             }
 
             int forwardStations = drawInfo.routeInfo().drawStations.size() - drawInfo.index() - 1;
@@ -135,13 +134,14 @@ public class BeijingDiaobanRouteC extends BaseDiaobanDrawing {
                     drawStationsList.add(drawInfo.routeInfo().drawStations.get(drawInfo.index() + 5));
                 }
                 for (int i = 0; i < drawStationsList.size(); i++) {
-                    currentX += distance * (arrowSide == 2 ? 1 : -1);
+                    currentX += distance * (arrowDirection == 2 ? 1 : -1);
                     g.fillOval(currentX - (int) (h * 0.06), heightPercent(y, h, 0.48), (int) (h * 0.02), (int) (h * 0.02));
                     g.fillOval(currentX - (int) (h * 0.01), heightPercent(y, h, 0.48), (int) (h * 0.02), (int) (h * 0.02));
                     g.fillOval(currentX + (int) (h * 0.04), heightPercent(y, h, 0.48), (int) (h * 0.02), (int) (h * 0.02));
-                    currentX += distance * (arrowSide == 2 ? 1 : -1);
-                    JsFunctions.jsDrawStrDl(g, baseFont, baseFont, drawStationsList.get(i).stationName,
-                            currentX, heightPercent(y, h, 0.35), h * 0.3, 1, 1);
+                    currentX += distance * (arrowDirection == 2 ? 1 : -1);
+                    G2dTextHelper.drawStrMultiLinesWithStretch(g, baseFont, baseFont,
+                            currentX, heightPercent(y, h, 0.65), Math.round(h * 0.3f), Math.round(distance * 0.8f), 1, 1,
+                            drawStationsList.get(i).stationName.split("\\|"));
                 }
             }
         }

@@ -73,21 +73,20 @@ public class BeijingRisB extends BaseRisDrawing {
             // 原 jsDrawStrDl: bd=1(居中偏移), d=1(行内居中)
             int mainStrH = (int) (h * 0.325);
             String[] mainLines = routeInfo.drawStations.get(drawInfo.index).stationName.split("\\|");
-            int mainWidth = G2dTextHelper.getMultiLinesWidth(g, fontBold, fontBold, mainStrH, mainLines);
             int maxMainWidth = (int) (w * 0.7);
             G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
-                    widthPercent(x, w, 0.5) - mainWidth / 2,
-                    heightPercent(y, h, 0.15) - mainStrH,
-                    mainStrH, maxMainWidth, 1, mainLines);
+                    widthPercent(x, w, 0.5),
+                    heightPercent(y, h, 0.15),
+                    mainStrH, maxMainWidth, 1, 1, mainLines);
 
             if (drawInfo.index == routeInfo.drawStations.size() - 1 && circularState == LocalRoute.CircularState.NONE) {
                 String[] termLines = "终点站|Terminals".split("\\|");
                 int termStrH = (int) (h * 0.2);
-                int termWidth = G2dTextHelper.getMultiLinesWidth(g, fontBold, fontBold, termStrH, termLines);
+                int maxTerWidth = (int) (w * 0.6);
                 G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
-                        widthPercent(x, w, 0.5) - termWidth / 2,
-                        heightPercent(y, h, 0.7) - termStrH,
-                        termStrH, maxMainWidth, 1, termLines);
+                        widthPercent(x, w, 0.7),
+                        heightPercent(y, h, 0.7),
+                        termStrH, maxTerWidth, 1, 1, termLines);
             } else {
                 int nextIndex = drawInfo.index + 1 == routeInfo.drawStations.size() ? 0 : drawInfo.index + 1;
                 // "下一站|Next Station" 保持原样用 jsDrawStrDl（文字短不需要缩放）
@@ -98,11 +97,11 @@ public class BeijingRisB extends BaseRisDrawing {
                 int nextStrH = (int) (h * 0.2);
                 String[] nextLines = routeInfo.drawStations.get(nextIndex).stationName.split("\\|");
                 int nextWidth = G2dTextHelper.getMultiLinesWidth(g, fontBold, fontBold, nextStrH, nextLines);
-                int maxNextWidth = (int) (w * 0.4);
+                int maxNextWidth = (int) (w * 0.5);
                 G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
-                        widthPercent(x, w, 0.9) - nextWidth,
-                        heightPercent(y, h, 0.7) - nextStrH,
-                        nextStrH, maxNextWidth, 1, nextLines);
+                        widthPercent(x, w, 0.7),
+                        heightPercent(y, h, 0.7),
+                        nextStrH, maxNextWidth, 1, 1, nextLines);
             }
         }
     }

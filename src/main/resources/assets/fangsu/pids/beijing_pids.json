@@ -243,6 +243,103 @@
           }
         }
       ]
+    },
+    {
+      "id": "beijing_pids_b1",
+      "text": "beijing_pids_b1",
+      "model": "fangsu:pids/beijing/beijing_pids_a1.obj",
+      "script": "pids_beijing_b",
+      "slots": [
+        [
+          [
+            -0.609375,
+            0.68616875,
+            -0.158
+          ],
+          [
+            -0.609375,
+            -0.0080875,
+            -0.344
+          ],
+          [
+            0.609375,
+            -0.0080875,
+            -0.344
+          ],
+          [
+            0.609375,
+            0.68616875,
+            -0.158
+          ]
+        ]
+      ],
+      "shape": [
+        [
+          -1.5,
+          -0.5,
+          12,
+          17.5,
+          6,
+          14
+        ],
+        [
+          -1.5,
+          6,
+          10,
+          17.5,
+          12,
+          12
+        ],
+        [
+          2,
+          0,
+          12,
+          14,
+          10,
+          26
+        ]
+      ],
+      "texSize": [
+        1024,
+        512
+      ],
+      "extraConfig": [
+        {
+          "type": "list",
+          "text": "cfg.adv.type",
+          "savePos": "imgType",
+          "default": 0,
+          "param": {
+            "savePos": "imgType",
+            "listItems": [
+              {
+                "text": "ui.fangsu.adv.type_locale",
+                "val": "local"
+              }
+            ]
+          }
+        },
+        {
+          "type": "str",
+          "text": "cfg.sign.imgpath",
+          "savePos": "imgPath",
+          "default": "",
+          "param": {
+            "savePos": "imgPath",
+            "lines": 2
+          }
+        },
+        {
+          "type": "str",
+          "text": "cfg.scroll.text",
+          "savePos": "scrollText",
+          "default": "",
+          "param": {
+            "savePos": "scrollText",
+            "lines": 4
+          }
+        }
+      ]
     }
   ]
 }

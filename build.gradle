@@ -11,7 +11,7 @@ plugins {
 }
 
 def modName = 'MTR Beijing Addon'
-def modVersion = '0.0.2'
+def modVersion = '0.0.3'
 
 repositories {
     flatDir { dirs 'libs' }

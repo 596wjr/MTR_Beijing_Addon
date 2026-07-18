@@ -1,75 +1,188 @@
 package com.fangsu.beijing.pids;
 
+import com.fangsu.beijing.util.DrawUtil;
 import com.fangsu.blockEntities.BlockEntityPids;
 import com.fangsu.drawing.pids.BasePidsDrawing;
+import com.fangsu.mappings.ResourceLocation;
+import com.fangsu.mtr.LocalRoute;
 import com.fangsu.scripting.G2dTextHelper;
 import com.fangsu.scripting.GraphicsTexture;
 import com.fangsu.scripting.JsFunctions;
 import com.fangsu.scripting.TextUtil;
+import com.fangsu.utils.LocalResourceUtil;
 import com.fangsu.utils.MtrUtil;
 
 import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class BeijingPidsB extends BasePidsDrawing {
-    private static final String FONT_PATH = "mtrsteamloco:fonts/source-han-sans.otf";
-    private static final String FONT_BOLD_PATH = "mtrsteamloco:fonts/source-han-sans-bold.otf";
+    private static final ResourceLocation FONT_PATH = new ResourceLocation("mtrsteamloco", "fonts/source-han-sans.otf");
+    private static final ResourceLocation FONT_BOLD_PATH = new ResourceLocation("mtrsteamloco", "fonts/source-han-sans-bold.otf");
+
+    private static final Color MAIN_COLOR = new Color(143, 236, 255);
+    private static final Color DETAIL_COLOR = new Color(87, 192, 255);
+
+    private static final float LEFT_PERCENT = 0.4f;
+    private static final float LEFT_TOP_PERCENT = 0.2f;
+    private static final float LEFT_MIDDLE_PERCENT = (1f - LEFT_TOP_PERCENT) / 2f;
+    private static final float RIGHT_TOP_PERCENT = 0.65f;
+
+    private static final float STROKE_SIZE = 0.005f;
+    private static final float STROKE_SIZE_BOLD = 0.01f;
+    private static final float CORNER_RADIUS = 0.0125f;
+
+    private static final float COMMON_FONT_SIZE = 0.075f;
+    private static final float SMALL_FONT_SIZE = 0.06f;
+    private static final float LARGE_FONT_SIZE = 0.15f;
+    private static final float MSG_FONT_SIZE = 0.1f;
 
     @Override
     public void draw(GraphicsTexture gt, List<MtrUtil.PidsArrivalInfo> arrivalInfoList,
-                     Map<String, Object> drawState, int texW, int texH,
+                     Map<String, Object> drawState, int w, int h,
                      BlockEntityPids.DrawInfoPids drawInfo) {
         Graphics2D g = gt.graphics;
         int x = 0;
         int y = 0;
-        int w = texW;
-        int h = texH;
+
+        final float strokeSize = h * STROKE_SIZE;
+        final float strokeSizeBold = h * STROKE_SIZE_BOLD;
+        final BasicStroke stroke = new BasicStroke(strokeSize);
+        final BasicStroke strokeBold = new BasicStroke(strokeSizeBold);
+        final int corner = Math.round(w * CORNER_RADIUS);
+
+        final int leftX = widthPercent(x, w, LEFT_PERCENT);
+
+        final int commonFontSize = Math.round(h * COMMON_FONT_SIZE);
+        final int smallFontSize = Math.round(h * SMALL_FONT_SIZE);
+        final int largeFontSize = Math.round(h * LARGE_FONT_SIZE);
+        final int msgFontSize = Math.round(h * MSG_FONT_SIZE);
 
         boolean isCjk = System.currentTimeMillis() % 6000 < 3000;
-        Font font;
-        try {
-            font = (Font) JsFunctions.loadResource("font", FONT_PATH);
-        } catch (Exception e) {
-            font = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
-        }
-        Font fontBold;
-        try {
-            fontBold = (Font) JsFunctions.loadResource("font", FONT_BOLD_PATH);
-        } catch (Exception e) {
-            fontBold = new Font(Font.SANS_SERIF, Font.BOLD, 12);
-        }
+        Font font = LocalResourceUtil.loadFont(FONT_PATH);
+        Font fontBold = LocalResourceUtil.loadFont(FONT_BOLD_PATH);
 
         final var info1 = arrivalInfoList.size() >= 1 ? arrivalInfoList.get(0) : null;
         final var route1 = info1 != null ? MtrUtil.getRouteById(info1.routeId) : null;
         final var info2 = arrivalInfoList.size() >= 2 ? arrivalInfoList.get(1) : null;
+        final var route2 = info2 != null ? MtrUtil.getRouteById(info2.routeId) : null;
 
         // background
 
-        g.setColor(new Color(47, 81, 150));
+        g.setColor(new Color(0, 20, 0x40));
         g.fillRect(x, y, w, h);
-        g.setColor(Color.ORANGE);
-        g.fillRect(x, heightPercent(y, h, 0.6), w, Math.round(h * 0.0125f));
-        g.fillRect(widthPercent(x, w, 0.35), y, Math.round(h * 0.0125f), Math.round(h * 0.6f));
 
-        g.setStroke(new BasicStroke(h * 0.005f));
-        g.drawRoundRect(widthPercent(x, w, 0.025), heightPercent(y, h, 0.15), Math.round(w * 0.3f), Math.round(h * 0.125f), Math.round(h * 0.05f), Math.round(h * 0.05f));
-        g.drawRoundRect(widthPercent(x, w, 0.025), heightPercent(y, h, 0.3), Math.round(w * 0.3f), Math.round(h * 0.25f), Math.round(h * 0.05f), Math.round(h * 0.05f));
-        g.drawLine(widthPercent(x, w, 0.025), heightPercent(y, h, 0.425), widthPercent(x, w, 0.325), heightPercent(y, h, 0.425));
+        g.setColor(new Color(255, 191, 0));
+        g.setStroke(strokeBold);
+        g.drawLine(x, heightPercent(y, h, LEFT_TOP_PERCENT), leftX, heightPercent(y, h, LEFT_TOP_PERCENT));
+        g.drawLine(x, Math.round(y + h - strokeSizeBold), leftX, Math.round(y + h - strokeSizeBold));
+        g.drawLine(leftX, heightPercent(y, h, RIGHT_TOP_PERCENT), x + w, heightPercent(y, h, RIGHT_TOP_PERCENT));
+        g.drawLine(leftX, y, leftX, y + h);
+        g.setStroke(stroke);
+        g.drawLine(x + corner, heightPercent(y, h, LEFT_TOP_PERCENT + LEFT_MIDDLE_PERCENT), leftX - corner, heightPercent(y, h, LEFT_TOP_PERCENT + LEFT_MIDDLE_PERCENT));
 
-        g.setColor(Color.BLACK);
-        int gap1 = Math.round(w * 0.0125f);
-        String lineName = route1 != null ? TextUtil.getCjkMatching(route1.name, isCjk) : "";
-        int lineNameStringWidth = Math.min(G2dTextHelper.getUnifiedStringWidth(g, font, lineName, Math.round(h * 0.05f)), Math.round(w * 0.15f));
-        StringBuilder dateString = new StringBuilder();
-        dateString.append(JsFunctions.formatDate(isCjk));
-        dateString.append("  ");
-        dateString.append(JsFunctions.formatWeekday(isCjk));
-        G2dTextHelper.drawStrUnifiedWithStretch(g, font, dateString.toString(),
-                widthPercent(x, w, 0.025) + lineNameStringWidth + 2 * gap1, heightPercent(y, h, 0.15), Math.round(h * 0.05f),
-                Math.round(w * 0.3f) - lineNameStringWidth - 2 * gap1, 0);
+        //top
+        {
+            g.setColor(Color.WHITE);
+            int leftWidth = Math.round(w * LEFT_PERCENT - corner * 4);
+            leftWidth -= G2dTextHelper.drawStrMultiLines(g, fontBold, fontBold, x + corner * 2, y + corner + msgFontSize, msgFontSize, 0, 0, "方速轨交", "FangSu Railway");
+            if (route1 != null)
+                DrawUtil.drawLineNameBoxWithStretch(g, fontBold, font, font, route1.name, new Color(route1.color),
+                        leftX - corner * 2, y + corner, leftWidth - corner, msgFontSize, 2, false, false
+                );
+            ZonedDateTime now = ZonedDateTime.now();
+            DateTimeFormatter formatter;
+            if (isCjk) {
+                formatter = DateTimeFormatter.ofPattern("yyyy年M月d日");
+            } else {
+                formatter = DateTimeFormatter.ofPattern("MMM d yyyy", Locale.US);
+            }
+            String date = now.format(formatter);
+            String time = now.format(DateTimeFormatter.ofPattern("HH:mm"));
 
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, date, x + corner * 2, heightPercent(y, h, LEFT_TOP_PERCENT) - corner, smallFontSize, 0);
+            G2dTextHelper.drawStrUnified(g, font, time, leftX - corner * 2, heightPercent(y, h, LEFT_TOP_PERCENT) - corner, smallFontSize, 2);
+        }
 
+        //trains
+        final String terminusStr = isCjk ? "终点站" : "Terminus";
+        final String thisTrainStr = isCjk ? "本次列车" : "This Train";
+        final String nextTrainStr = isCjk ? "下次列车" : "Next Train";
+        final String minStr = isCjk ? "分钟" : "min";
+        final String secStr = isCjk ? "秒" : "sec";
+        final int terminusWidth = G2dTextHelper.getUnifiedStringWidth(g, font, terminusStr, commonFontSize);
+        final int thisTrainWidth = G2dTextHelper.getUnifiedStringWidth(g, font, thisTrainStr, commonFontSize);
+        final int nextTrainWidth = G2dTextHelper.getUnifiedStringWidth(g, font, nextTrainStr, commonFontSize);
+        final int minWidth = G2dTextHelper.getUnifiedStringWidth(g, font, minStr, commonFontSize);
+        final int secWidth = G2dTextHelper.getUnifiedStringWidth(g, font, secStr, commonFontSize);
+
+        final int terminusLeftWidth = Math.round(w * LEFT_PERCENT) - corner * 2 - terminusWidth;
+
+        //train1
+        {
+            final int beginY = heightPercent(y, h, LEFT_TOP_PERCENT);
+            final String terminus = route1 != null ? MtrUtil.getDestinationByRoute((LocalRoute) route1) : "";
+            final long timeMillis = info1 != null ? info1.arrivalMillis - System.currentTimeMillis() : Long.MIN_VALUE;
+            final int timeSec = Math.round(timeMillis / 1000f);
+            final int timeMin = (int) (timeSec / 60f);
+            final String timeStr = timeSec < 30 ? "" : timeSec < 60 ? secStr : minStr;
+            final String countStr = timeMillis == Long.MIN_VALUE ? "" :
+                    timeSec < 1 ? (isCjk ? "列车到站" : "Arrived") :
+                            timeSec < 30 ? (isCjk ? "即将到站" : "Arriving") :
+                                    (timeSec < 60 ? timeSec : timeMin) + "";
+
+            final int timeWidth = G2dTextHelper.getUnifiedStringWidth(g, font, timeStr, commonFontSize);
+            final int timeLeftWidth = Math.round(w * LEFT_PERCENT) - corner * 4 - thisTrainWidth - timeWidth;
+
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, terminusStr, x + corner, beginY + corner + commonFontSize, commonFontSize, 0);
+            g.setColor(DETAIL_COLOR);
+            G2dTextHelper.drawStrUnifiedWithStretch(g, font, TextUtil.getCjkMatching(terminus, isCjk), leftX - corner,
+                    beginY + corner + commonFontSize, commonFontSize, terminusLeftWidth, 2);
+
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, thisTrainStr, x + corner, beginY + corner + commonFontSize + (largeFontSize / 2) + commonFontSize, commonFontSize, 0);
+            G2dTextHelper.drawStrUnified(g, font, timeStr, leftX - corner, beginY + corner + commonFontSize + (largeFontSize / 2) + commonFontSize, commonFontSize, 2);
+            g.setColor(DETAIL_COLOR);
+            G2dTextHelper.drawStrUnifiedWithStretch(g, fontBold, countStr, ((x + corner + thisTrainWidth) + (leftX - corner - timeWidth)) / 2,
+                    beginY + corner + commonFontSize + largeFontSize, largeFontSize, timeLeftWidth, 1);
+        }
+
+        //train2
+        {
+            final int beginY = heightPercent(y, h, LEFT_TOP_PERCENT + LEFT_MIDDLE_PERCENT);
+            final String terminus = route2 != null ? MtrUtil.getDestinationByRoute((LocalRoute) route2) : "";
+            final long timeMillis = info2 != null ? info2.arrivalMillis - System.currentTimeMillis() : Long.MIN_VALUE;
+            final int timeSec = Math.round(timeMillis / 1000f);
+            final int timeMin = (int) (timeSec / 60f);
+            final String timeStr = timeSec < 30 ? "" : timeSec < 60 ? secStr : minStr;
+            final String countStr = timeMillis == Long.MIN_VALUE ? "" :
+                    timeSec < 1 ? (isCjk ? "列车到站" : "Arrived") :
+                            timeSec < 30 ? (isCjk ? "即将到站" : "Arriving") :
+                                    (timeSec < 60 ? timeSec : timeMin) + "";
+
+            final int timeWidth = G2dTextHelper.getUnifiedStringWidth(g, font, timeStr, commonFontSize);
+            final int timeLeftWidth = Math.round(w * LEFT_PERCENT) - corner * 4 - nextTrainWidth - timeWidth;
+
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, terminusStr, x + corner, beginY + corner + commonFontSize, commonFontSize, 0);
+            g.setColor(DETAIL_COLOR);
+            G2dTextHelper.drawStrUnifiedWithStretch(g, font, TextUtil.getCjkMatching(terminus, isCjk), leftX - corner,
+                    beginY + corner + commonFontSize, commonFontSize, terminusLeftWidth, 2);
+
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, nextTrainStr, x + corner, beginY + corner + commonFontSize + (largeFontSize / 2) + commonFontSize, commonFontSize, 0);
+            G2dTextHelper.drawStrUnified(g, font, timeStr, leftX - corner, beginY + corner + commonFontSize + (largeFontSize / 2) + commonFontSize, commonFontSize, 2);
+            g.setColor(DETAIL_COLOR);
+            G2dTextHelper.drawStrUnifiedWithStretch(g, fontBold, countStr, ((x + corner + nextTrainWidth) + (leftX - corner - timeWidth)) / 2,
+                    beginY + corner + commonFontSize + largeFontSize, largeFontSize, timeLeftWidth, 1);
+        }
     }
 
 
