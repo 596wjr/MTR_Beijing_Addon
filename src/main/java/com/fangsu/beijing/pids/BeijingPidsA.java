@@ -22,12 +22,10 @@ public class BeijingPidsA extends BasePidsDrawing {
 
     @Override
     public void draw(GraphicsTexture gt, List<MtrUtil.PidsArrivalInfo> arrivalInfoList,
-                     Map<String, Object> drawState, int texW, int texH,
+                     Map<String, Object> drawState, int w, int h,
                      BlockEntityPids.DrawInfoPids drawInfo) {
         int x = 0;
         int y = 0;
-        int w = texW;
-        int h = texH;
         Graphics2D g = gt.graphics;
 
         // === 加载资源 ===
@@ -43,7 +41,7 @@ public class BeijingPidsA extends BasePidsDrawing {
         Map<String, Object> extraConfig = drawInfo.extraConfig;
         String extraImage = extraConfig != null ? (String) extraConfig.get("imgPath") : null;
         String extraImageType = extraConfig != null ? (String) extraConfig.get("imgType") : null;
-        if (extraImageType == null) extraImageType = "img";
+        if (extraImageType == null) extraImageType = "local";
         boolean shouldRenderExtraImage = extraImage != null && !extraImage.isEmpty();
 
         if (shouldRenderExtraImage) {

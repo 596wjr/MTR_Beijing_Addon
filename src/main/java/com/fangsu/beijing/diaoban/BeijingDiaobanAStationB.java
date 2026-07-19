@@ -72,9 +72,9 @@ public class BeijingDiaobanAStationB extends BaseDiaobanDrawing {
                         String.valueOf(JsFunctions.getCJKLineName(TextUtil.getCjkParts(routeName))),
                         currentX, heightPercent(y, h, 0.725), (float) (h * 0.225), 2);
             } else {
-                JsFunctions.jsDrawStrDl(g, fontBold, font, routeName,
+                JsFunctions.jsDrawStrDl(g, fontBold, font, TextUtil.getNonExtraParts(routeName),
                         widthPercent(x, w, 0.1), heightPercent(y, h, 0.525), h * 0.2, 0, 1);
-                JsFunctions.jsDrawStrDl(g, fontBold, font, routeName,
+                JsFunctions.jsDrawStrDl(g, fontBold, font, TextUtil.getNonExtraParts(routeName),
                         widthPercent(x, w, 0.9), heightPercent(y, h, 0.525), h * 0.2, 2, 1);
             }
 

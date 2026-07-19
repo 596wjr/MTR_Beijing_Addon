@@ -71,7 +71,7 @@ public class DrawUtil {
             currentX += G2dTextHelper.drawStrUnified(g, digitFont, name, currentX, y + textHeight + textGap, textHeight, 0);
             G2dTextHelper.drawStrMultiLines(g, cjkFont, nonCjkFont, currentX, y + textGap - textHeight, textHeight, 0, "号线", TextUtil.getNonCjkParts(routeName));
         } else {
-            G2dTextHelper.drawStrMultiLines(g, cjkFont, nonCjkFont, x + gap, y + textGap - textHeight, textHeight, 1, TextUtil.getNonExtraParts(routeName).split("\\|"));
+            G2dTextHelper.drawStrMultiLines(g, cjkFont, nonCjkFont, beginX + gap, y + textGap - textHeight, textHeight, 1, TextUtil.getNonExtraParts(routeName).split("\\|"));
         }
 
         g.setFont(origFont);

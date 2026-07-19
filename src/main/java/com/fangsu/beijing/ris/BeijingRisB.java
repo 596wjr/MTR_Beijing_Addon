@@ -76,7 +76,7 @@ public class BeijingRisB extends BaseRisDrawing {
             int maxMainWidth = (int) (w * 0.7);
             G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
                     widthPercent(x, w, 0.5),
-                    heightPercent(y, h, 0.15),
+                    heightPercent(y, h, 0.15) + mainStrH,
                     mainStrH, maxMainWidth, 1, 1, mainLines);
 
             if (drawInfo.index == routeInfo.drawStations.size() - 1 && circularState == LocalRoute.CircularState.NONE) {
@@ -85,7 +85,7 @@ public class BeijingRisB extends BaseRisDrawing {
                 int maxTerWidth = (int) (w * 0.6);
                 G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
                         widthPercent(x, w, 0.7),
-                        heightPercent(y, h, 0.7),
+                        heightPercent(y, h, 0.7) + termStrH,
                         termStrH, maxTerWidth, 1, 1, termLines);
             } else {
                 int nextIndex = drawInfo.index + 1 == routeInfo.drawStations.size() ? 0 : drawInfo.index + 1;
@@ -100,7 +100,7 @@ public class BeijingRisB extends BaseRisDrawing {
                 int maxNextWidth = (int) (w * 0.5);
                 G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
                         widthPercent(x, w, 0.7),
-                        heightPercent(y, h, 0.7),
+                        heightPercent(y, h, 0.7) + nextStrH,
                         nextStrH, maxNextWidth, 1, 1, nextLines);
             }
         }

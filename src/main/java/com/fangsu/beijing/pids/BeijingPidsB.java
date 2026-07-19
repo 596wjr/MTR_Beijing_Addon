@@ -1,6 +1,7 @@
 package com.fangsu.beijing.pids;
 
 import com.fangsu.beijing.util.DrawUtil;
+import com.fangsu.beijing.util.TextWrapper;
 import com.fangsu.blockEntities.BlockEntityPids;
 import com.fangsu.drawing.pids.BasePidsDrawing;
 import com.fangsu.mappings.ResourceLocation;
@@ -13,13 +14,17 @@ import com.fangsu.utils.LocalResourceUtil;
 import com.fangsu.utils.MtrUtil;
 
 import java.awt.*;
+import java.awt.font.FontRenderContext;
+import java.awt.font.LineBreakMeasurer;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.text.AttributedCharacterIterator;
+import java.text.AttributedString;
 import java.text.SimpleDateFormat;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
+import java.util.*;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 
 public class BeijingPidsB extends BasePidsDrawing {
     private static final ResourceLocation FONT_PATH = new ResourceLocation("mtrsteamloco", "fonts/source-han-sans.otf");
@@ -42,6 +47,8 @@ public class BeijingPidsB extends BasePidsDrawing {
     private static final float LARGE_FONT_SIZE = 0.15f;
     private static final float MSG_FONT_SIZE = 0.1f;
 
+    private static final float SCROLL_SPEED = 0.25f;
+
     @Override
     public void draw(GraphicsTexture gt, List<MtrUtil.PidsArrivalInfo> arrivalInfoList,
                      Map<String, Object> drawState, int w, int h,
@@ -63,9 +70,9 @@ public class BeijingPidsB extends BasePidsDrawing {
         final int largeFontSize = Math.round(h * LARGE_FONT_SIZE);
         final int msgFontSize = Math.round(h * MSG_FONT_SIZE);
 
-        boolean isCjk = System.currentTimeMillis() % 6000 < 3000;
-        Font font = LocalResourceUtil.loadFont(FONT_PATH);
-        Font fontBold = LocalResourceUtil.loadFont(FONT_BOLD_PATH);
+        final boolean isCjk = System.currentTimeMillis() % 6000 < 3000;
+        final Font font = LocalResourceUtil.loadFont(FONT_PATH);
+        final Font fontBold = LocalResourceUtil.loadFont(FONT_BOLD_PATH);
 
         final var info1 = arrivalInfoList.size() >= 1 ? arrivalInfoList.get(0) : null;
         final var route1 = info1 != null ? MtrUtil.getRouteById(info1.routeId) : null;
@@ -85,6 +92,22 @@ public class BeijingPidsB extends BasePidsDrawing {
         g.drawLine(leftX, y, leftX, y + h);
         g.setStroke(stroke);
         g.drawLine(x + corner, heightPercent(y, h, LEFT_TOP_PERCENT + LEFT_MIDDLE_PERCENT), leftX - corner, heightPercent(y, h, LEFT_TOP_PERCENT + LEFT_MIDDLE_PERCENT));
+
+        //img
+        {
+            final String imgPath = (String) drawInfo.extraConfig.get("imgPath");
+            BufferedImage img;
+            try {
+                if (imgPath.endsWith("gif")) img = (BufferedImage) JsFunctions.loadResource("gif", imgPath);
+                else img = (BufferedImage) JsFunctions.loadResource("img", imgPath);
+            } catch (Exception e) {
+                img = null;
+            }
+            if (img != null) {
+                g.drawImage(img, Math.round(leftX + strokeSizeBold / 2), y,
+                        Math.round(w * (1 - LEFT_PERCENT) - strokeSizeBold / 2), Math.round(h * RIGHT_TOP_PERCENT), null);
+            }
+        }
 
         //top
         {
@@ -116,18 +139,20 @@ public class BeijingPidsB extends BasePidsDrawing {
         final String nextTrainStr = isCjk ? "下次列车" : "Next Train";
         final String minStr = isCjk ? "分钟" : "min";
         final String secStr = isCjk ? "秒" : "sec";
+        final String carStr = isCjk ? "编组" : " Cars";
         final int terminusWidth = G2dTextHelper.getUnifiedStringWidth(g, font, terminusStr, commonFontSize);
         final int thisTrainWidth = G2dTextHelper.getUnifiedStringWidth(g, font, thisTrainStr, commonFontSize);
         final int nextTrainWidth = G2dTextHelper.getUnifiedStringWidth(g, font, nextTrainStr, commonFontSize);
         final int minWidth = G2dTextHelper.getUnifiedStringWidth(g, font, minStr, commonFontSize);
         final int secWidth = G2dTextHelper.getUnifiedStringWidth(g, font, secStr, commonFontSize);
+        final int carWidth = G2dTextHelper.getUnifiedStringWidth(g, font, carStr, commonFontSize);
 
         final int terminusLeftWidth = Math.round(w * LEFT_PERCENT) - corner * 2 - terminusWidth;
 
         //train1
         {
             final int beginY = heightPercent(y, h, LEFT_TOP_PERCENT);
-            final String terminus = route1 != null ? MtrUtil.getDestinationByRoute((LocalRoute) route1) : "";
+            final String terminus = route1 != null ? MtrUtil.getDestinationByRoute(route1) : "";
             final long timeMillis = info1 != null ? info1.arrivalMillis - System.currentTimeMillis() : Long.MIN_VALUE;
             final int timeSec = Math.round(timeMillis / 1000f);
             final int timeMin = (int) (timeSec / 60f);
@@ -152,12 +177,18 @@ public class BeijingPidsB extends BasePidsDrawing {
             g.setColor(DETAIL_COLOR);
             G2dTextHelper.drawStrUnifiedWithStretch(g, fontBold, countStr, ((x + corner + thisTrainWidth) + (leftX - corner - timeWidth)) / 2,
                     beginY + corner + commonFontSize + largeFontSize, largeFontSize, timeLeftWidth, 1);
+
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, carStr, leftX - corner, beginY + Math.round(h * LEFT_MIDDLE_PERCENT) - corner, commonFontSize, 2);
+            g.setColor(DETAIL_COLOR);
+            if (info1 != null)
+                G2dTextHelper.drawStrUnified(g, font, info1.trainCars + "", leftX - corner - carWidth, beginY + Math.round(h * LEFT_MIDDLE_PERCENT) - corner, msgFontSize, 2);
         }
 
         //train2
         {
             final int beginY = heightPercent(y, h, LEFT_TOP_PERCENT + LEFT_MIDDLE_PERCENT);
-            final String terminus = route2 != null ? MtrUtil.getDestinationByRoute((LocalRoute) route2) : "";
+            final String terminus = route2 != null ? MtrUtil.getDestinationByRoute(route2) : "";
             final long timeMillis = info2 != null ? info2.arrivalMillis - System.currentTimeMillis() : Long.MIN_VALUE;
             final int timeSec = Math.round(timeMillis / 1000f);
             final int timeMin = (int) (timeSec / 60f);
@@ -182,6 +213,52 @@ public class BeijingPidsB extends BasePidsDrawing {
             g.setColor(DETAIL_COLOR);
             G2dTextHelper.drawStrUnifiedWithStretch(g, fontBold, countStr, ((x + corner + nextTrainWidth) + (leftX - corner - timeWidth)) / 2,
                     beginY + corner + commonFontSize + largeFontSize, largeFontSize, timeLeftWidth, 1);
+
+            g.setColor(MAIN_COLOR);
+            G2dTextHelper.drawStrUnified(g, font, carStr, leftX - corner, beginY + Math.round(h * LEFT_MIDDLE_PERCENT) - corner, commonFontSize, 2);
+            g.setColor(DETAIL_COLOR);
+            if (info2 != null)
+                G2dTextHelper.drawStrUnified(g, font, info2.trainCars + "", leftX - corner - carWidth, beginY + Math.round(h * LEFT_MIDDLE_PERCENT) - corner, msgFontSize, 2);
+        }
+
+        //scrolling
+        {
+            final int drawHeight = Math.round(h * (1 - RIGHT_TOP_PERCENT));
+            String line = (String) drawInfo.extraConfig.get("scrollText");
+            List<String> lines;
+            g.setFont(font.deriveFont(Font.PLAIN, msgFontSize));
+            //cache
+            if (line.equals(drawState.get("scrollText"))) {
+                try {
+                    lines = (List<String>) drawState.get("wrappedLines");
+                } catch (Exception ignored) {
+                    lines = List.of();
+                }
+            } else {
+                lines = TextWrapper.wrapTextPreserveNewlines(g, line, font, Math.round(w * (1 - LEFT_PERCENT)) - corner * 2, msgFontSize);
+                drawState.put("scrollText", line);
+                drawState.put("wrappedLines", lines);
+            }
+            final Shape oriClip = g.getClip();
+
+            // 计算顶部边界
+            int top = heightPercent(y, h, RIGHT_TOP_PERCENT);
+            int speed = Math.round(h * SCROLL_SPEED);
+            int lineHeight = Math.round(1.1f * msgFontSize);
+            int totalHeight = lineHeight * lines.size();
+            int totalTime = Math.round((float) totalHeight / speed);
+            g.setClip(new Rectangle(leftX, top, Math.round(w * (1 - LEFT_PERCENT)), drawHeight));
+
+            // 滚动
+            float elapsed = (System.currentTimeMillis() / 1000f) % totalTime;
+            int offset = (int) ((elapsed * speed));
+            int yPos = top + lineHeight;  // 向上移动
+            for (String l : lines) {
+                g.drawString(l, leftX + corner, yPos);
+                yPos += lineHeight;
+            }
+
+            g.setClip(oriClip);
         }
     }
 

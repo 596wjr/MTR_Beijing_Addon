@@ -320,7 +320,7 @@
           }
         },
         {
-          "type": "str",
+          "type": "resource",
           "text": "cfg.sign.imgpath",
           "savePos": "imgPath",
           "default": "",
@@ -336,6 +336,134 @@
           "default": "",
           "param": {
             "savePos": "scrollText",
+            "suffixes": [
+              ".png",
+              ".gif"
+            ],
+            "lines": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "beijing_pids_b2",
+      "text": "beijing_pids_b2",
+      "model": "fangsu:pids/beijing/pids_1.obj",
+      "script": "pids_beijing_b",
+      "flipV": true,
+      "slots": [
+        [
+          [
+            -0.79625,
+            0.941935,
+            0.434717
+          ],
+          [
+            -0.79625,
+            -0.004672,
+            0.181075
+          ],
+          [
+            0.79625,
+            -0.004672,
+            0.181075
+          ],
+          [
+            0.79625,
+            0.941935,
+            0.434717
+          ]
+        ],
+        [
+          [
+            0.79625,
+            0.941935,
+            -0.434717
+          ],
+          [
+            0.79625,
+            -0.004672,
+            -0.181075
+          ],
+          [
+            -0.79625,
+            -0.004672,
+            -0.181075
+          ],
+          [
+            -0.79625,
+            0.941935,
+            -0.434717
+          ]
+        ]
+      ],
+      "shape": [
+        [
+          -3,
+          0,
+          5,
+          18,
+          5,
+          11
+        ],
+        [
+          -3,
+          5,
+          4,
+          18,
+          10,
+          12
+        ],
+        [
+          -3,
+          10,
+          3,
+          18,
+          16,
+          13
+        ]
+      ],
+      "texSize": [
+        1024,
+        512
+      ],
+      "extraConfig": [
+        {
+          "type": "list",
+          "text": "cfg.adv.type",
+          "savePos": "imgType",
+          "default": 0,
+          "param": {
+            "savePos": "imgType",
+            "listItems": [
+              {
+                "text": "ui.fangsu.adv.type_locale",
+                "val": "local"
+              }
+            ]
+          }
+        },
+        {
+          "type": "resource",
+          "text": "cfg.sign.imgpath",
+          "savePos": "imgPath",
+          "default": "",
+          "param": {
+            "savePos": "imgPath",
+            "lines": 2
+          }
+        },
+        {
+          "type": "str",
+          "text": "cfg.scroll.text",
+          "savePos": "scrollText",
+          "default": "",
+          "param": {
+            "savePos": "scrollText",
+            "suffixes": [
+              ".png",
+              ".gif"
+            ],
             "lines": 4
           }
         }
