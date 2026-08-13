@@ -5,7 +5,6 @@ import com.fangsu.mtr.LocalRoute;
 import com.fangsu.mtr.LocalRouteDetail;
 import com.fangsu.scripting.GraphicsTexture;
 import com.fangsu.ui.RouteSelectInfo;
-import com.fangsu.ui.RouteSelectionScreen;
 
 import java.awt.*;
 import java.util.List;

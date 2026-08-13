@@ -1,0 +1,10 @@
+# Made in Blockbench 5.1.4
+newmtl m_b31cdfc4-27f1-0933-0a13-bd37009ad1f7
+map_Kd sign_pole.png
+newmtl m_4c054f93-b2e4-c754-67f9-a97580b39769
+map_Kd sign_side.png
+newmtl m_64fbd2c4-597e-979b-9f21-31c8b2e6d18a
+map_Kd sign_light.png
+newmtl m_183ef9df-9aaf-9784-8308-59ed72349c6c
+map_Kd black.png
+newmtl none

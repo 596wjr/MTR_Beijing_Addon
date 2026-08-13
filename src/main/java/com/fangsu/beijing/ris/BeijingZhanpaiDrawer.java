@@ -52,7 +52,8 @@ public final class BeijingZhanpaiDrawer {
             int currentX = Math.round(x + w * 0.05f) + (arrowLeft ? Math.round(w * 0.05f) : 0) + Math.round(distance * i * 1.5f);
 
             if (drawIndex == index) {
-                g.fillOval(currentX, beginY - Math.round(textBasicScale * 1.5f), textBasicScale, textBasicScale);
+                g.fillOval(currentX + Math.round(textBasicScale * 0.25f), beginY - Math.round(textBasicScale * 2f),
+                        Math.round(textBasicScale * 0.5f), Math.round(textBasicScale * 0.5f));
             }
 
             if (TextUtil.isCjk(stn)) {
@@ -75,12 +76,23 @@ public final class BeijingZhanpaiDrawer {
                 transform.rotate(Math.toRadians(90));
                 g.setTransform(transform);
 
-                //noinspection SuspiciousNameCombination
                 G2dTextHelper.drawStrUnifiedWithStretch(g, syht, stn, 0, 0, actualTextWidth, maxHeight, 0);
             }
             g.setTransform(originalTransform);
         }
 
+        //arrow
+        switch (connectionType) {
+            case NONE:
+                g.setColor(Color.WHITE);
+                g.fillRect(Math.round(x + w * 0.1f), Math.round(y + h * 0.95f), Math.round(w * 0.8f), Math.round(h * 0.025f));
+                g.fillPolygon(
+                        new int[]{Math.round(x + w * 0.9f), Math.round(x + w * 0.85f), Math.round(x + w * 0.875f)},
+                        new int[]{Math.round(y + h * 0.95f), Math.round(y + h * 0.925f), Math.round(y + h * 0.95f)},
+                        3
+                );
+                break;
+        }
     }
 
     private static void loadResources() {

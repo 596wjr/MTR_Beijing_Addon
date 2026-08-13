@@ -84,7 +84,7 @@ public class BeijingRisB extends BaseRisDrawing {
                 int termStrH = (int) (h * 0.2);
                 int maxTerWidth = (int) (w * 0.6);
                 G2dTextHelper.drawStrMultiLinesWithStretch(g, fontBold, fontBold,
-                        widthPercent(x, w, 0.7),
+                        widthPercent(x, w, 0.5),
                         heightPercent(y, h, 0.7) + termStrH,
                         termStrH, maxTerWidth, 1, 1, termLines);
             } else {

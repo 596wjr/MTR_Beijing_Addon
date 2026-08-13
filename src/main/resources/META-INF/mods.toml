@@ -6,4 +6,14 @@ license = "MIT"
 modId = "mtr_beijing_addon"
 version = "${version}"
 displayName = "MTR Beijing Addon"
-entrypoint = "com.fangsu.beijing.BeijingAddon"
+description = "方速 MTR 扩展：北京地铁内容包（纯 API 模组，依赖方速模组 fangsu 提供的能力注册绘制器与模型）。"
+
+# Forge 无 entrypoint 字段；入口通过扫描 @Mod 注解类定位，
+# 见 com.fangsu.beijing.forge.BeijingAddonForge
+
+[[dependencies.mtr_beijing_addon]]
+    modId = "fangsu"
+    mandatory = true
+    versionRange = "[1,)"
+    ordering = "NONE"
+    side = "BOTH"

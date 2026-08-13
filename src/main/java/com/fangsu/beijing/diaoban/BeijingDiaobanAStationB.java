@@ -42,9 +42,9 @@ public class BeijingDiaobanAStationB extends BaseDiaobanDrawing {
 
     @Override
     public void draw(GraphicsTexture gt, List<RouteSelectInfo> routes,
-                     Map<String, Object> drawState, int arrowDirection, int texW, int texH) {
+                     Map<String, Object> drawState, int arrowDirection, int w, int h) {
         Graphics2D g = gt.graphics;
-        int x = 0, y = 0, w = texW, h = texH;
+        int x = 0, y = 0;
 
         Font font = getFont();
         Font fontBold = getFontBold();
@@ -52,7 +52,7 @@ public class BeijingDiaobanAStationB extends BaseDiaobanDrawing {
         g.setColor(Color.WHITE);
         g.fillRect(x, y, w, h);
 
-        RouteDrawer.RouteDrawInfo drawInfo = buildDrawInfo(routes, arrowDirection, texW, texH);
+        RouteDrawer.RouteDrawInfo drawInfo = buildDrawInfo(routes, arrowDirection, w, h);
 
         if (drawInfo.routeInfo() != null) {
             var thisStn = drawInfo.routeInfo().drawStations.get(drawInfo.index());

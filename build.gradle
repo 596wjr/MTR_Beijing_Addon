@@ -11,7 +11,7 @@ plugins {
 }
 
 def modName = 'MTR Beijing Addon'
-def modVersion = '0.0.4'
+def modVersion = '0.0.5'
 
 repositories {
     flatDir { dirs 'libs' }
@@ -41,7 +41,11 @@ dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly 'com.google.code.gson:gson:2.8.9'
 //    compileOnly fg.deobf("net.minecraftforge:forge:40.2.0")
-    compileOnly 'net.minecraftforge:forge:1.18.2-40.2.0'
+    // Forge 的 @Mod 注解类（net.minecraftforge.fml.common.Mod）由 javafmllanguage 提供，
+    // 已放入 libs/（javafmllanguage-1.20.1-47.2.0.jar），由上面的 fileTree 自动引入。
+    // 不要依赖 maven 坐标 'net.minecraftforge:forge:...' —— 其 maven 产物不含 FML 类，
+    // 且本模组为纯 API 模组，编译期只需 @Mod 注解，无需完整 Forge/MC classpath。
+//    compileOnly 'net.minecraftforge:forge:1.18.2-40.2.0'
 }
 
 java {
